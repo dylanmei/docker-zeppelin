@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SPARK_PROFILE=1.3
-SPARK_VERSION=1.3.0
+SPARK_VERSION=1.3.1
 HADOOP_PROFILE=2.4
 HADOOP_VERSION=2.4.0
 
@@ -16,11 +16,13 @@ cat > $ZEPPELIN_HOME/conf/zeppelin-env.sh <<CONF
 # 1. pass individual --environment variables during docker run
 # 2. assign a volume and change the conf directory i.e.,
 #    -e "ZEPPELIN_CONF_DIR=/zeppelin-conf" --volumes ./conf:/zeppelin-conf
-# 3. set them during the build, as the example below
-# 4. when customizing the Docker build, add ENV instructions
+# 3. when customizing the Dockerfile, add ENV instructions
+# 4. write variables to zeppelin-env.sh during install.sh, as
+#    we're doing here.
 #
 # See conf/zeppelin-env.sh.template for additional
 # Zeppelin environment variables to set from here.
+#
 
 export ZEPPELIN_MEM="-Xmx1024m"
 CONF
