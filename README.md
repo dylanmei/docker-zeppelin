@@ -3,7 +3,7 @@
 
 A `debian:jessie` based Spark [Zeppelin](http://zeppelin.incubator.apache.org) Docker container.
 
-# usage
+## usage
 
 Pull the image and run the container:
 
@@ -18,7 +18,7 @@ By default, Zeppelin wants to use ports 8080-8081. So do a lot of other things, 
 docker run --name zeppelin -e "ZEPPELIN_PORT=8090" -p 8090:8090 -p 8091:8091 dylanmei/zeppelin:master
 ```
 
-# customize
+## customize
 
 Forking this project to change Spark/Hadoop versions is unnecessary! Instead, create a `Dockerfile` based on `dylanmei/zeppelin:master` and supply a new `install.sh` file in the same directory. It will override the base one via Docker's [ONBUILD](https://docs.docker.com/reference/builder/#onbuild) instruction.
 
