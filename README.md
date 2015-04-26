@@ -22,9 +22,10 @@ docker run --name zeppelin -e "ZEPPELIN_PORT=8090" -p 8090:8090 -p 8091:8091 dyl
 
 Forking this project to change Spark/Hadoop versions is unnecessary! Instead, create a `Dockerfile` based on `dylanmei/zeppelin:master` and supply a new `install.sh` file in the same directory. It will override the base one via Docker's [ONBUILD](https://docs.docker.com/reference/builder/#onbuild) instruction.
 
-The steps, expressed here as bash, can be as simple as:
+The steps, expressed here as a script, can be as simple as:
 
 ```
+#!/bin/bash
 cat > ./Dockerfile <<DOCKERFILE
 FROM dylanmei/zeppelin:master
 
@@ -36,7 +37,7 @@ mvn clean package -DskipTests \
   -Pspark-1.2 \
   -Dspark.version=1.2.1 \
   -Phadoop-2.2 \
-  -Dhadoop.version=2.0.0-cdh4.2.0
+  -Dhadoop.version=2.0.0-cdh4.2.0 \
   -Pyarn
 INSTALL
 
