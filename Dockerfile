@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Dylan Meissner "https://github.com/dylanmei"
 
 RUN apt-get update \
-  && apt-get install -y curl net-tools build-essential git \
+  && apt-get install -y curl net-tools build-essential git wget unzip \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
