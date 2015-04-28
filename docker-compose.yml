@@ -47,7 +47,7 @@ worker:
     - ./data:/tmp/data
 
 zeppelin:
-  image: dylanmei/zeppelin:master
+  image: dylanmei/zeppelin:latest
   hostname: zeppelin
   environment:
     ZEPPELIN_PORT: 8090

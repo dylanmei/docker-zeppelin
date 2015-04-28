@@ -12,8 +12,8 @@ Run the Zeppelin container with an embedded Spark master, or in a Spark cluster.
 Pull the image and run the container:
 
 ```
-docker pull dylanmei/zeppelin:master
-docker run --name zeppelin -p 8080:8080 -p 8081:8081 dylanmei/zeppelin:master
+docker pull dylanmei/zeppelin:latest
+docker run --name zeppelin -p 8080:8080 -p 8081:8081 dylanmei/zeppelin:latest
 ```
 
 Zeppelin will be running at `http://${YOUR_DOCKER_HOST}:8080`.
@@ -21,7 +21,7 @@ Zeppelin will be running at `http://${YOUR_DOCKER_HOST}:8080`.
 By default, Zeppelin wants to use ports 8080-8081. So do a lot of other things, including a Spark master UI. Change the ports Zeppelin uses by specifying `--environment "ZEPPELIN_PORT="8090"` to `docker run`. For example:
 
 ```
-docker run --name zeppelin -e "ZEPPELIN_PORT=8090" -p 8090:8090 -p 8091:8091 dylanmei/zeppelin:master
+docker run --name zeppelin -e "ZEPPELIN_PORT=8090" -p 8090:8090 -p 8091:8091 dylanmei/zeppelin:latest
 ```
 
 ### cluster
@@ -36,7 +36,7 @@ The Spark Master UI will be running at `http://${YOUR_DOCKER_HOST}:8080` and Zep
 
 ## customize
 
-Forking this project to change Spark/Hadoop versions is unnecessary! Instead, create a `Dockerfile` based on `dylanmei/zeppelin:master` and supply a new `install.sh` file in the same directory. It will override the base one via Docker's [ONBUILD](https://docs.docker.com/reference/builder/#onbuild) instruction.
+Forking this project to change Spark/Hadoop versions is unnecessary! Instead, create a `Dockerfile` based on `dylanmei/zeppelin:master` and supply a new, executable `install.sh` file in the same directory. It will override the base one via Docker's [ONBUILD](https://docs.docker.com/reference/builder/#onbuild) instruction.
 
 The steps, expressed here as a script, can be as simple as:
 
