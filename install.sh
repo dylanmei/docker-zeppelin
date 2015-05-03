@@ -5,6 +5,14 @@ SPARK_VERSION=1.3.1
 HADOOP_PROFILE=2.4
 HADOOP_VERSION=2.4.0
 
+curl -sL --retry 3 \
+  "http://mirrors.ibiblio.org/apache/spark/spark-$SPARK_VERSION/spark-$SPARK_VERSION-bin-hadoop$HADOOP_PROFILE.tgz" \
+  | gunzip \
+  | tar x -C /usr/ \
+  && ln -s /usr/spark-$SPARK_VERSION-bin-hadoop$HADOOP_PROFILE /usr/spark \
+  && rm -rf /usr/spark/examples \
+  && rm /usr/spark/lib/spark-examples*.jar
+
 git pull
 
 mvn clean package -DskipTests \
@@ -27,4 +35,5 @@ cat > $ZEPPELIN_HOME/conf/zeppelin-env.sh <<CONF
 #
 
 export ZEPPELIN_MEM="-Xmx1024m"
+export ZEPPELIN_JAVA_OPTS="-Dspark.home=/usr/spark"
 CONF

@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Dylan Meissner "https://github.com/dylanmei"
 
 RUN apt-get update \
-  && apt-get install -y curl net-tools build-essential git wget unzip \
+  && apt-get install -y curl net-tools build-essential git wget unzip python python-setuptools \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
@@ -16,6 +16,7 @@ RUN curl -sL --retry 3 --insecure \
   | tar x -C /usr/ \
   && ln -s $JAVA_HOME /usr/java \
   && rm -rf $JAVA_HOME/man
+RUN easy_install py4j
 
 # MAVEN
 ENV MAVEN_VERSION 3.3.1
