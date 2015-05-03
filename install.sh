@@ -5,6 +5,8 @@ SPARK_VERSION=1.3.1
 HADOOP_PROFILE=2.4
 HADOOP_VERSION=2.4.0
 
+git pull
+
 mvn clean package -DskipTests \
   -Pspark-$SPARK_PROFILE \
   -Dspark.version=$SPARK_VERSION \
