@@ -38,8 +38,7 @@ COPY ./install.sh $ZEPPELIN_HOME/install.sh
 
 # INSTALL & CLEAN
 WORKDIR $ZEPPELIN_HOME
-ONBUILD COPY ./install.sh install.sh
-ONBUILD RUN ./install.sh \
+RUN ./install.sh \
   && rm -rf /root/.m2 \
   && rm -rf /root/.npm
 
