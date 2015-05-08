@@ -5,9 +5,9 @@ A `debian:jessie` based Spark [Zeppelin](http://zeppelin.incubator.apache.org) D
 
 ## usage
 
-Run the Zeppelin container with an embedded Spark master, or in a Spark cluster.
+Run the Zeppelin container in Spark local mode, or in a Spark cluster.
 
-### embedded
+### local
 
 Pull the image and run the container:
 
@@ -18,17 +18,17 @@ docker run --name zeppelin -p 8080:8080 -p 8081:8081 dylanmei/zeppelin:latest
 
 Zeppelin will be running at `http://${YOUR_DOCKER_HOST}:8080`.
 
-By default, Zeppelin wants to use ports 8080-8081. So do a lot of other things, including a Spark master UI. Change the ports Zeppelin uses by specifying `--environment "ZEPPELIN_PORT="8090"` to `docker run`. For example:
+#### specify a data volume
 
-#### specify data volume
-
-Optionally, use Docker volumes to map the local `./data` directory as the `/data/zeppelin` used in the Zeppelin tutorial:
+Optionally, use Docker volumes to map the local `./data` directory as the `/data/zeppelin` directory used in the Zeppelin *banks.csv* tutorial:
 
 ```
 docker run --name zeppelin -v `pwd`/data:/zeppelin/data -p 8080:8080 -p 8081:8081 dylanmei/zeppelin:latest
 ```
 
-#### modify default ports
+#### modify the default ports
+
+By default, Zeppelin wants to use ports 8080-8081. So do a lot of other things, including a Spark master UI. Change the ports Zeppelin uses by specifying `--environment "ZEPPELIN_PORT="8090"` to `docker run`. For example:
 
 ```
 docker run --name zeppelin -e "ZEPPELIN_PORT=8090" -p 8090:8090 -p 8091:8091 dylanmei/zeppelin:latest
