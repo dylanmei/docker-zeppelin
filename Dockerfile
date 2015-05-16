@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Dylan Meissner "https://github.com/dylanmei"
 
 RUN apt-get update \
-  && apt-get install -y curl net-tools build-essential git wget unzip python python-setuptools \
+  && apt-get install -y curl net-tools build-essential git wget unzip python python-setuptools python-dev python-numpy \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
