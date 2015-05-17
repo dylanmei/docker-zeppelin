@@ -59,6 +59,7 @@ ENV ZEPPELIN_MEM="-Xmx1024m"
 DOCKERFILE
 
 cat > ./install.sh <<INSTALL
+git pull
 mvn clean package -DskipTests \
   -Pspark-1.2 \
   -Dspark.version=1.2.1 \
