@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SPARK_PROFILE=1.3
-SPARK_VERSION=1.3.1
+SPARK_PROFILE=1.5
+SPARK_VERSION=1.5.2
 HADOOP_PROFILE=2.4
 HADOOP_VERSION=2.4.0
 
@@ -34,6 +34,6 @@ cat > $ZEPPELIN_HOME/conf/zeppelin-env.sh <<CONF
 # Zeppelin environment variables to set from here.
 #
 
+export SPARK_HOME=/usr/spark
 export ZEPPELIN_MEM="-Xmx1024m"
-export ZEPPELIN_JAVA_OPTS="-Dspark.home=/usr/spark"
 CONF
