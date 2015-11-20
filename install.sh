@@ -15,6 +15,7 @@ curl -sL --retry 3 \
 
 git pull
 
+sed -i 's/--no-color/buildSkipTests --no-color/' zeppelin-web/pom.xml
 mvn clean package -DskipTests \
   -Pspark-$SPARK_PROFILE \
   -Dspark.version=$SPARK_VERSION \
