@@ -1,0 +1,87 @@
+{
+  "paragraphs": [
+    {
+      "text": "%spark\n\ns\"version\u003d${sc.version}\"\ns\"packages\u003d${sc.jars}\"\nsc.getConf.toDebugString",
+      "dateUpdated": "Nov 21, 2015 7:24:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1448133240482_926175272",
+      "id": "20151121-191400_1868672906",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "res1: String \u003d version\u003d1.5.2\nres2: String \u003d packages\u003dList(file:/root/.ivy2/jars/com.databricks_spark-csv_2.10-1.2.0.jar, file:/root/.ivy2/jars/org.apache.commons_commons-csv-1.1.jar, file:/root/.ivy2/jars/com.univocity_univocity-parsers-1.5.1.jar, file:/zeppelin/interpreter/spark/zeppelin-spark-0.6.0-incubating-SNAPSHOT.jar)\nres3: String \u003d \nargs\u003d\nmaster\u003dlocal[*]\nspark.app.id\u003dlocal-1448133897636\nspark.app.name\u003dZeppelin\nspark.driver.extraClassPath\u003d::/zeppelin/interpreter/spark/zeppelin-spark-0.6.0-incubating-SNAPSHOT.jar\nspark.driver.extraJavaOptions\u003d -Dspark.driver.memory\u003d1g -Dspark.executor.memory\u003d2g -Dfile.encoding\u003dUTF-8 -Xmx1024m -Dspark.driver.memory\u003d1g -Dspark.executor.memory\u003d2g -Dfile.encoding\u003dUTF-8 -Xmx1024m -Dzeppelin.log.file\u003d/zeppelin/logs/zeppelin-interpreter-spark--ea16b76b8963.log\nspark.driver.host\u003d172.17.0.246\nspark.driver.memory\u003d1g\nspark.driver.port\u003d49142\nspark.executor.id\u003ddriver\nspark.executor.memory\u003d2g\nspark.externalBlockStore.folderName\u003dspark-c728cd56-5a11-4bd3-95b1-6f37dab2edba\nspark.fileserver.uri\u003dhttp://172.17.0.246:35284\nspark.home\u003d/usr/spark\nspark.jars\u003dfile:/root/.ivy2/jars/com.databri..."
+      },
+      "dateCreated": "Nov 21, 2015 7:14:00 PM",
+      "dateStarted": "Nov 21, 2015 7:24:43 PM",
+      "dateFinished": "Nov 21, 2015 7:25:31 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "dateUpdated": "Nov 21, 2015 7:24:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1448133251195_-129960459",
+      "id": "20151121-191411_1493848724",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT"
+      },
+      "dateCreated": "Nov 21, 2015 7:14:11 PM",
+      "dateStarted": "Nov 21, 2015 7:24:49 PM",
+      "dateFinished": "Nov 21, 2015 7:25:31 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Spark Conf",
+  "id": "2B4C7CN3W",
+  "angularObjects": {
+    "2B5DUR76N": [],
+    "2B7A6FBFU": [],
+    "2B7JHW918": [],
+    "2B7862QGN": [],
+    "2B4485V8A": [],
+    "2B5SBFHA5": [],
+    "2B5WESC8C": [],
+    "2B5KD72KJ": [],
+    "2B6AK3UNQ": [],
+    "2B5UV3PQ1": [],
+    "2B6AK8BHH": [],
+    "2B56GTHXE": [],
+    "2B4WGD9KU": []
+  },
+  "config": {},
+  "info": {}
+}
