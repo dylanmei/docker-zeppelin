@@ -16,7 +16,6 @@ RUN curl -sL --retry 3 --insecure \
   | tar x -C /usr/ \
   && ln -s $JAVA_HOME /usr/java \
   && rm -rf $JAVA_HOME/man
-RUN easy_install py4j
 
 # MAVEN
 ENV MAVEN_VERSION 3.3.1

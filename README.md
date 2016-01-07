@@ -26,14 +26,14 @@ Zeppelin will be running at `http://${YOUR_DOCKER_HOST}:8080`.
 
 ## customize
 
-Forking this project to change Spark/Hadoop versions is unnecessary! Instead, create a `Dockerfile` based on `dylanmei/zeppelin:master` and supply a new, executable `install.sh` file in the same directory. It will override the base one via Docker's [ONBUILD](https://docs.docker.com/reference/builder/#onbuild) instruction.
+Forking this project to change Spark/Hadoop versions is unnecessary! Instead, create a `Dockerfile` based on `dylanmei/zeppelin:onbuild` and supply a new, executable `install.sh` file in the same directory. It will override the base one via Docker's [ONBUILD](https://docs.docker.com/reference/builder/#onbuild) instruction.
 
 The steps, expressed here as a script, can be as simple as:
 
 ```
 #!/bin/bash
 cat > ./Dockerfile <<DOCKERFILE
-FROM dylanmei/zeppelin:master
+FROM dylanmei/zeppelin:onbuild
 
 ENV ZEPPELIN_MEM="-Xmx1024m"
 DOCKERFILE
