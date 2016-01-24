@@ -12,7 +12,7 @@ curl -sL "http://d3kbcqa49mib13.cloudfront.net/spark-$SPARK_VERSION-bin-hadoop$H
   && rm -rf /usr/spark/examples \
   && rm /usr/spark/lib/spark-examples*.jar
 
-git pull
+git pull && git checkout -q 9308ee1
 sed -i 's/--no-color/buildSkipTests --no-color/' zeppelin-web/pom.xml
 mvn clean package -DskipTests \
   -Ppyspark \

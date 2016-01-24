@@ -2,7 +2,7 @@
   "paragraphs": [
     {
       "text": "%spark\n\ns\"version\u003d${sc.version}\"\ns\"packages\u003d${sc.jars}\"\nsc.getConf.toDebugString",
-      "dateUpdated": "Jan 17, 2016 5:48:47 PM",
+      "dateUpdated": "Jan 24, 2016 10:26:22 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -26,11 +26,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "res0: String \u003d version\u003d1.6.0\nres1: String \u003d packages\u003dList(file:/root/.ivy2/jars/com.databricks_spark-csv_2.10-1.2.0.jar, file:/root/.ivy2/jars/org.apache.commons_commons-csv-1.1.jar, file:/root/.ivy2/jars/com.univocity_univocity-parsers-1.5.1.jar, file:/zeppelin/interpreter/spark/zeppelin-spark-0.6.0-incubating-SNAPSHOT.jar)\nres2: String \u003d \nargs\u003d\nmaster\u003dlocal[*]\nspark.app.id\u003dlocal-1453052941420\nspark.app.name\u003dZeppelin\nspark.driver.extraClassPath\u003d::/zeppelin/interpreter/spark/zeppelin-spark-0.6.0-incubating-SNAPSHOT.jar\nspark.driver.extraJavaOptions\u003d -Dspark.driver.memory\u003d1g -Dspark.executor.memory\u003d2g -Dfile.encoding\u003dUTF-8 -Dspark.driver.memory\u003d1g -Dspark.executor.memory\u003d2g -Dfile.encoding\u003dUTF-8 -Dzeppelin.log.file\u003d/zeppelin/logs/zeppelin-interpreter-spark--9e3b435953ad.log\nspark.driver.host\u003d172.17.0.14\nspark.driver.memory\u003d1g\nspark.driver.port\u003d52556\nspark.executor.id\u003ddriver\nspark.executor.memory\u003d2g\nspark.externalBlockStore.folderName\u003dspark-46443a25-7a01-4a70-8878-4c521d30806d\nspark.home\u003d/usr/spark\nspark.jars\u003dfile:/root/.ivy2/jars/com.databricks_spark-csv_2.10-1.2.0.jar,file:/root/.ivy2/jars/org.apache.common..."
+        "msg": "res0: String \u003d version\u003d1.6.0\nres1: String \u003d packages\u003dList(file:/root/.ivy2/jars/com.databricks_spark-csv_2.10-1.2.0.jar, file:/root/.ivy2/jars/org.apache.commons_commons-csv-1.1.jar, file:/root/.ivy2/jars/com.univocity_univocity-parsers-1.5.1.jar, file:/zeppelin/interpreter/spark/zeppelin-spark-0.6.0-incubating-SNAPSHOT.jar)\nres2: String \u003d \nargs\u003d\nmaster\u003dlocal[*]\nspark.app.id\u003dlocal-1453674397559\nspark.app.name\u003dZeppelin\nspark.driver.extraClassPath\u003d::/zeppelin/interpreter/spark/zeppelin-spark-0.6.0-incubating-SNAPSHOT.jar\nspark.driver.extraJavaOptions\u003d -Dspark.driver.memory\u003d1g -Dspark.executor.memory\u003d2g -Dfile.encoding\u003dUTF-8 -Dspark.driver.memory\u003d1g -Dspark.executor.memory\u003d2g -Dfile.encoding\u003dUTF-8 -Dzeppelin.log.file\u003d/zeppelin/logs/zeppelin-interpreter-spark--7158c8e7fdd3.log\nspark.driver.host\u003d172.17.0.57\nspark.driver.memory\u003d1g\nspark.driver.port\u003d60563\nspark.executor.id\u003ddriver\nspark.executor.memory\u003d2g\nspark.externalBlockStore.folderName\u003dspark-a05bfb19-0e7a-44dd-afde-fc6981ae0753\nspark.home\u003d/usr/spark\nspark.jars\u003dfile:/root/.ivy2/jars/com.databricks_spark-csv_2.10-1.2.0.jar,file:/root/.ivy2/jars/org.apache.common..."
       },
       "dateCreated": "Nov 21, 2015 7:14:00 PM",
-      "dateStarted": "Jan 17, 2016 5:48:47 PM",
-      "dateFinished": "Jan 17, 2016 5:49:32 PM",
+      "dateStarted": "Jan 24, 2016 10:26:22 PM",
+      "dateFinished": "Jan 24, 2016 10:27:09 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -69,20 +69,21 @@
   "name": "Spark Conf",
   "id": "2B4C7CN3W",
   "angularObjects": {
-    "2BAJ3RG5A": [],
-    "2BB3Z4WYU": [],
-    "2BANB5ZVB": [],
-    "2BA8VV4AK": [],
-    "2BB6PJVA9": [],
-    "2BAYKJNN2": [],
-    "2B9CAPXJP": [],
-    "2BB2BZ85D": [],
-    "2B8KY84NE": [],
-    "2B8W51A73": [],
-    "2BAAAA8FM": [],
-    "2B8EYQGE8": [],
-    "2B9J5E27P": [],
-    "2B982BBTW": []
+    "2BB2M89P2": [],
+    "2B9MYHGBH": [],
+    "2BBGEC7QH": [],
+    "2BC866PGH": [],
+    "2B8VU79M6": [],
+    "2B9J93QPM": [],
+    "2BB4YVUQQ": [],
+    "2B9G9UQPB": [],
+    "2B9QB5CGJ": [],
+    "2B98EB1X7": [],
+    "2BAQ1FUBE": [],
+    "2BCA57V1W": [],
+    "2BCSDG9U7": [],
+    "2B93Q5ADN": [],
+    "2BAETZNT4": []
   },
   "config": {},
   "info": {}
