@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git pull
-sed -i 's/--no-color/buildSkipTests --no-color/' zeppelin-web/pom.xml
+
 mvn clean package -DskipTests -Ppyspark
 easy_install py4j
 
