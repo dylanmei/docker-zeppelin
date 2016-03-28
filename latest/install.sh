@@ -13,7 +13,7 @@ curl -sL "http://d3kbcqa49mib13.cloudfront.net/spark-$SPARK_VERSION-bin-hadoop$H
   && rm /usr/spark/lib/spark-examples*.jar
 
 git pull && git checkout -q a4e81ad
-mvn clean package -DskipTests \
+mvn clean -DskipTests \
   -Ppyspark \
   -Pspark-$SPARK_PROFILE \
   -Dspark.version=$SPARK_VERSION \

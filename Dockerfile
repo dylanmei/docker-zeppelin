@@ -18,7 +18,7 @@ RUN curl -sL --retry 3 --insecure \
   && rm -rf $JAVA_HOME/man
 
 # MAVEN
-ENV MAVEN_VERSION 3.3.1
+ENV MAVEN_VERSION 3.3.9
 ENV MAVEN_HOME /usr/apache-maven-$MAVEN_VERSION
 ENV PATH $PATH:$MAVEN_HOME/bin
 RUN curl -sL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz \
