@@ -1,32 +1,37 @@
-
 # zeppelin
 
 A `debian:jessie` based Spark [Zeppelin](http://zeppelin.incubator.apache.org) Docker container.
 
-## usage
+This image is large and opinionated. It contains
 
-Run the Zeppelin container in Spark local mode, or in a Spark cluster.
+- [Spark 1.6.1](http://spark.apache.org/docs/1.6.1) and Hadoop 2.6.3
+- [PySpark](http://spark.apache.org/docs/1.6.1/api/python) support with Python3, [NumPy](http://www.numpy.org), and [SciPy](https://www.scipy.org/scipylib/index.html), but no matplotlib support.
+- All the interpreters. To specify exactly which interpreters to expose, use the `ZEPPELIN_INTERPRETERS` env variable. For example, `ZEPPELIN_INTERPRETERS=org.apache.zeppelin.spark.SparkInterpreter,org.apache.zeppelin.spark.SparkSqlInterpreter` will expose only the Spark and Spark SQL inerpreters.
 
-### local
+## simple usage
 
-Pull the image and run the container:
-
-```
-docker pull dylanmei/zeppelin:latest
-docker run --name zeppelin -p 8080:8080 -p 8081:8081 dylanmei/zeppelin:latest
-```
-
-Or, using [docker-compose](http://docs.docker.com/compose):
+To run Zeppelin in Spark local mode, pull the `latest` image and run the container:
 
 ```
-docker-compose up
+docker pull dylanmei/zeppelin
+docker run --rm --name zeppelin -p 8080:8080 dylanmei/zeppelin
 ```
 
 Zeppelin will be running at `http://${YOUR_DOCKER_HOST}:8080`.
 
-## customize
+## complex usage
 
-Forking this project to change Spark/Hadoop versions is unnecessary! Instead, create a `Dockerfile` based on `dylanmei/zeppelin:onbuild` and supply a new, executable `install.sh` file in the same directory. It will override the base one via Docker's [ONBUILD](https://docs.docker.com/reference/builder/#onbuild) instruction.
+You can use [docker-compose](http://docs.docker.com/compose) to easily run Zeppelin in more complex configurations. See the `./examples` directory for examples of using Zeppelin:
+
+- with the default tutorial
+- with local data files
+- with ElasticSearch
+
+## onbuild
+
+The Docker `onbuild` container is still a part of this project, but **I have no plans to keep it updated**. See the `onbuild` directory to view its `Dockerfile`.
+
+To use it, create a new `Dockerfile` based on `dylanmei/zeppelin:onbuild` and supply a new, executable `install.sh` file in the same directory. It will override the base one via Docker's [ONBUILD](https://docs.docker.com/reference/builder/#onbuild) instruction.
 
 The steps, expressed here as a script, can be as simple as:
 

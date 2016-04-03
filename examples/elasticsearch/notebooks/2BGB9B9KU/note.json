@@ -1,0 +1,286 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md Zeppelin can interact with [ElasticSearch](http://elastic.co) via an [ElasticSearch interpreter](http://zeppelin.incubator.apache.org/docs/0.6.0-incubating-SNAPSHOT/interpreter/elasticsearch.html), and also via Spark. This notebook uses the Spark interpreter.\n\nFirst, let\u0027s use the shell interpreter to be sure that [Docker Compose](https://www.docker.com/products/docker-compose) has linked our ElasticSearch container and that we can reach it...",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 2:24:32 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459605570097_-1588815334",
+      "id": "20160402-135930_2083484499",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eZeppelin can interact with \u003ca href\u003d\"http://elastic.co\"\u003eElasticSearch\u003c/a\u003e via an \u003ca href\u003d\"http://zeppelin.incubator.apache.org/docs/0.6.0-incubating-SNAPSHOT/interpreter/elasticsearch.html\"\u003eElasticSearch interpreter\u003c/a\u003e, and also via Spark.\u003c/p\u003e\n\u003cp\u003eFirst, let\u0027s use the shell interpreter to be sure that \u003ca href\u003d\"https://www.docker.com/products/docker-compose\"\u003eDocker Compose\u003c/a\u003e has linked our ElasticSearch container and that we can reach it\u0026hellip;\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 2, 2016 1:59:30 PM",
+      "dateStarted": "Apr 2, 2016 2:17:19 PM",
+      "dateFinished": "Apr 2, 2016 2:17:19 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh curl http://elasticsearch:9200/",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 2:16:59 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459606590466_-768478129",
+      "id": "20160402-141630_1281675637",
+      "dateCreated": "Apr 2, 2016 2:16:30 PM",
+      "dateStarted": "Apr 2, 2016 2:16:59 PM",
+      "dateFinished": "Apr 2, 2016 2:17:00 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md Next, we\u0027ll create a fictitious set of data and push it into ElasticSearch...",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 2:18:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459606619550_-1917677121",
+      "id": "20160402-141659_1633937835",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eNext, we\u0027ll create a fictitious set of data and push it into ElasticSearch\u0026hellip;\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 2, 2016 2:16:59 PM",
+      "dateStarted": "Apr 2, 2016 2:18:06 PM",
+      "dateFinished": "Apr 2, 2016 2:18:06 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nimport org.elasticsearch.spark.sql._\n\ncase class Thing(id: Integer, name: String)\nval things \u003d Seq(\n  Thing(1, \"a\"),\n  Thing(2, \"b\"),\n  Thing(3, \"c\"),\n  Thing(4, \"d\"),\n  Thing(5, \"e\"))\n\nval df1 \u003d sc.parallelize(things).toDF()\nEsSparkSQL.saveToEs(df1, \"things/thing\", Map(\"es.mapping.id\" -\u003e \"id\"))",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 2:20:34 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459606686488_-1536098157",
+      "id": "20160402-141806_1390503933",
+      "dateCreated": "Apr 2, 2016 2:18:06 PM",
+      "dateStarted": "Apr 2, 2016 2:18:59 PM",
+      "dateFinished": "Apr 2, 2016 2:19:35 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md and finally, we\u0027ll read this data and print it.",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 2:20:11 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459606739824_1459834259",
+      "id": "20160402-141859_978429443",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eand finally, we\u0027ll read this data and print it.\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 2, 2016 2:18:59 PM",
+      "dateStarted": "Apr 2, 2016 2:20:11 PM",
+      "dateFinished": "Apr 2, 2016 2:20:11 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\nval df2 \u003d EsSparkSQL.esDF(sqlc,\"things/thing\")\ndf2.registerTempTable(\"things\")",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 2:22:26 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459606811248_1305808817",
+      "id": "20160402-142011_988662934",
+      "dateCreated": "Apr 2, 2016 2:20:11 PM",
+      "dateStarted": "Apr 2, 2016 2:20:57 PM",
+      "dateFinished": "Apr 2, 2016 2:20:58 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql select * from things",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 2:21:06 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459606857270_813607704",
+      "id": "20160402-142057_679357924",
+      "dateCreated": "Apr 2, 2016 2:20:57 PM",
+      "dateStarted": "Apr 2, 2016 2:21:06 PM",
+      "dateFinished": "Apr 2, 2016 2:21:07 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "",
+      "dateUpdated": "Apr 2, 2016 2:22:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459606866014_-974705184",
+      "id": "20160402-142106_1152519545",
+      "dateCreated": "Apr 2, 2016 2:21:06 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "ElasticSearch via Spark Interpreter",
+  "id": "2BGB9B9KU",
+  "angularObjects": {
+    "2BFT2WC65": [],
+    "2BHY2Z859": [],
+    "2BH8SCKHQ": [],
+    "2BGVJ13N9": [],
+    "2BGUAPAWF": [],
+    "2BGDD4P82": [],
+    "2BGFXBZTP": [],
+    "2BHSNJAG2": [],
+    "2BGJ8EH1W": [],
+    "2BGZ67F8R": [],
+    "2BGQWCVQ7": [],
+    "2BH9UMNMH": [],
+    "2BFC9UKK3": [],
+    "2BEVAT14Y": [],
+    "2BFPXQCKT": [],
+    "2BFFDHGWM": [],
+    "2BHD7JTF3": [],
+    "2BJ52UNV5": []
+  },
+  "config": {},
+  "info": {}
+}

@@ -1,0 +1,13 @@
+zeppelin:
+  image: dylanmei/zeppelin
+  environment:
+    ZEPPELIN_PORT: 8080
+    ZEPPELIN_JAVA_OPTS: >-
+      -Dspark.driver.memory=1g
+      -Dspark.executor.memory=2g
+    MASTER: local[*]
+  ports:
+    - 8080:8080
+  volumes:
+    - ./data:/usr/zeppelin/data
+    - ./notebooks:/usr/zeppelin/notebook

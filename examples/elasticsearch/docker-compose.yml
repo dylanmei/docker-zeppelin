@@ -1,0 +1,26 @@
+zeppelin:
+  image: dylanmei/zeppelin
+  environment:
+    ZEPPELIN_PORT: 8080
+    ZEPPELIN_JAVA_OPTS: >-
+      -Dspark.driver.memory=1g
+      -Dspark.executor.memory=2g
+    ZEPPELIN_INTP_JAVA_OPTS: >-
+      -Delasticsearch.host=elasticsearch
+    SPARK_SUBMIT_OPTIONS: >-
+      --conf spark.es.nodes=elasticsearch
+      --conf spark.es.nodes.wan.only=true
+      --conf spark.es.port=9200
+      --packages org.elasticsearch:elasticsearch-spark_2.10:2.2.0
+    MASTER: local[*]
+  links:
+    - elasticsearch:elasticsearch
+  ports:
+    - 8080:8080
+  volumes:
+    - ./notebooks:/usr/zeppelin/notebook
+elasticsearch:
+  image: elasticsearch:2.3
+  ports:
+    - 9200:9200
+    - 9300:9300

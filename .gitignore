@@ -1,4 +1,2 @@
-*.csv
-*.tsv
-*.json
-*.txt
+./notebooks/
+./docker-compose.yml

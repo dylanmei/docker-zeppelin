@@ -1,0 +1,238 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n\nYou\u0027ve used [Docker](https://www.docker.com/) and [Docker Compose](https://www.docker.com/products/docker-compose) to volume-mount the `./data` directory local to your project and `docker-compose.yml` file.\n\nAny file dropped into that folder will be accessible to Zeppelin. Likewise, any files we save from Zeppelin into `./data` will be available via your local filesystem. Try experimenting with the `shell` interpreter...",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 1:42:25 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459602416740_-108193700",
+      "id": "20160402-130656_696270436",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003eYou\u0027ve used \u003ca href\u003d\"https://www.docker.com/\"\u003eDocker\u003c/a\u003e and \u003ca href\u003d\"https://www.docker.com/products/docker-compose\"\u003eDocker Compose\u003c/a\u003e to volume-mount the \u003ccode\u003e./data\u003c/code\u003e directory local to your project and \u003ccode\u003edocker-compose.yml\u003c/code\u003e file.\u003c/p\u003e\n\u003cp\u003eAny file dropped into that folder will be accessible to Zeppelin. Likewise, any files we save from Zeppelin into \u003ccode\u003e./data\u003c/code\u003e will be available via your local filesystem. Try experimenting with the \u003ccode\u003eshell\u003c/code\u003e interpreter\u0026hellip;\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 2, 2016 1:06:56 PM",
+      "dateStarted": "Apr 2, 2016 1:42:24 PM",
+      "dateFinished": "Apr 2, 2016 1:42:24 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh echo \"hello data\" \u003e ./data/hello\nls -lh data/",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 1:20:59 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459602490325_842828960",
+      "id": "20160402-130810_963581603",
+      "dateCreated": "Apr 2, 2016 1:08:10 PM",
+      "dateStarted": "Apr 2, 2016 1:19:52 PM",
+      "dateFinished": "Apr 2, 2016 1:19:52 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh curl \"http://api.tvmaze.com/singlesearch/shows?q\u003dDeath%20in%20Paradise\u0026embed\u003depisodes\" -o data/death-in-paradise.json\nls -lh data/",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 1:30:12 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459602791853_105095108",
+      "id": "20160402-131311_1411682862",
+      "dateCreated": "Apr 2, 2016 1:13:11 PM",
+      "dateStarted": "Apr 2, 2016 1:30:12 PM",
+      "dateFinished": "Apr 2, 2016 1:30:13 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh apt-get update\napt-get install -y jq",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 1:38:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sh",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459603250051_1595842733",
+      "id": "20160402-132050_1242000979",
+      "dateCreated": "Apr 2, 2016 1:20:50 PM",
+      "dateStarted": "Apr 2, 2016 1:35:25 PM",
+      "dateFinished": "Apr 2, 2016 1:35:53 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh cat data/death-in-paradise.json | jq \u0027.\u0027",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 1:37:09 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459604125786_-1727761117",
+      "id": "20160402-133525_1714824318",
+      "dateCreated": "Apr 2, 2016 1:35:25 PM",
+      "dateStarted": "Apr 2, 2016 1:37:09 PM",
+      "dateFinished": "Apr 2, 2016 1:37:09 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\nvisit [stedolan.github.io/jq](https://stedolan.github.io/jq) to learn more about `jq`.\nvisit [github.com/jdorfman/awesome-json-datasets](https://github.com/jdorfman/awesome-json-datasets) to discover other awesome public json datasets.",
+      "authenticationInfo": {},
+      "dateUpdated": "Apr 2, 2016 1:40:38 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459604176646_-1179068670",
+      "id": "20160402-133616_1945151986",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003cp\u003evisit \u003ca href\u003d\"https://stedolan.github.io/jq\"\u003estedolan.github.io/jq\u003c/a\u003e to learn more about \u003ccode\u003ejq\u003c/code\u003e.\n\u003cbr  /\u003evisit \u003ca href\u003d\"https://github.com/jdorfman/awesome-json-datasets\"\u003egithub.com/jdorfman/awesome-json-datasets\u003c/a\u003e to discover other awesome public json datasets.\u003c/p\u003e\n"
+      },
+      "dateCreated": "Apr 2, 2016 1:36:16 PM",
+      "dateStarted": "Apr 2, 2016 1:40:20 PM",
+      "dateFinished": "Apr 2, 2016 1:40:20 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1459604363372_759789952",
+      "id": "20160402-133923_98010697",
+      "dateCreated": "Apr 2, 2016 1:39:23 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Local Data Files",
+  "id": "2BEQV7PZ5",
+  "angularObjects": {
+    "2BFNUG2EF": [],
+    "2BF159G8Q": [],
+    "2BHRXGCYV": [],
+    "2BF4TU9JZ": [],
+    "2BFCWTXXY": [],
+    "2BHDUPUYN": [],
+    "2BF62FK5H": [],
+    "2BH3664SB": [],
+    "2BF8EJYZ8": [],
+    "2BGBZ1HKC": [],
+    "2BJ7RYYU4": [],
+    "2BFA8QS45": [],
+    "2BH9JJ1PS": [],
+    "2BH3EZ7DM": [],
+    "2BJ63B3J2": [],
+    "2BFJ6PBS8": [],
+    "2BFGX1S56": [],
+    "2BH3NEN5Z": []
+  },
+  "config": {
+    "looknfeel": "default"
+  },
+  "info": {}
+}
