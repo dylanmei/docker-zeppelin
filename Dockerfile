@@ -55,5 +55,6 @@ RUN set -ex \
  && rm -rf /root/.npm \
  && rm -rf /tmp/*
 
+ADD about.json $ZEPPELIN_NOTEBOOK_DIR/2BH1SW5AH/note.json
 WORKDIR $ZEPPELIN_HOME
 CMD ["bin/zeppelin.sh"]
