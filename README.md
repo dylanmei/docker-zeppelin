@@ -4,7 +4,7 @@ A `debian:jessie` based Spark [Zeppelin](http://zeppelin.incubator.apache.org) D
 
 This image is large and opinionated. It contains
 
-- [Spark 1.6.1](http://spark.apache.org/docs/1.6.1) and Hadoop 2.6.3
+- [Spark 1.6.1](http://spark.apache.org/docs/1.6.1) and [Hadoop 2.6.3](http://hadoop.apache.org/docs/r2.6.3)
 - [PySpark](http://spark.apache.org/docs/1.6.1/api/python) support with Python3, [NumPy](http://www.numpy.org), and [SciPy](https://www.scipy.org/scipylib/index.html), but no matplotlib support.
 - All the interpreters. To specify exactly which interpreters to expose, use the `ZEPPELIN_INTERPRETERS` env variable. For example, `ZEPPELIN_INTERPRETERS=org.apache.zeppelin.spark.SparkInterpreter,org.apache.zeppelin.spark.SparkSqlInterpreter` will expose only the Spark and Spark SQL inerpreters.
 
