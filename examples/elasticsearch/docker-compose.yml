@@ -5,7 +5,6 @@ zeppelin:
     ZEPPELIN_JAVA_OPTS: >-
       -Dspark.driver.memory=1g
       -Dspark.executor.memory=2g
-    ZEPPELIN_INTP_JAVA_OPTS: >-
       -Delasticsearch.host=elasticsearch
     SPARK_SUBMIT_OPTIONS: >-
       --conf spark.es.nodes=elasticsearch
