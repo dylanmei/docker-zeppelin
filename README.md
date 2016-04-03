@@ -5,12 +5,22 @@ A `debian:jessie` based Spark [Zeppelin](http://zeppelin.incubator.apache.org) D
 This image is large and opinionated. It contains
 
 - [Spark 1.6.1](http://spark.apache.org/docs/1.6.1) and [Hadoop 2.6.3](http://hadoop.apache.org/docs/r2.6.3)
-- [PySpark](http://spark.apache.org/docs/1.6.1/api/python) support with Python3, [NumPy](http://www.numpy.org), and [SciPy](https://www.scipy.org/scipylib/index.html), but no matplotlib support.
-- All the interpreters. To specify exactly which interpreters to expose, use the `ZEPPELIN_INTERPRETERS` env variable. For example, `ZEPPELIN_INTERPRETERS=org.apache.zeppelin.spark.SparkInterpreter,org.apache.zeppelin.spark.SparkSqlInterpreter` will expose only the Spark and Spark SQL inerpreters.
+- [PySpark](http://spark.apache.org/docs/1.6.1/api/python) support with Python3, [NumPy](http://www.numpy.org), and [SciPy](https://www.scipy.org/scipylib/index.html), but no matplotlib.
+- A partial list of interpreters out-of-the-box. If your favorite interpreter isn't included, consider [adding it with the api](http://zeppelin.incubator.apache.org/docs/0.6.0-incubating-SNAPSHOT/manual/dynamicinterpreterload.html).
+  - spark
+  - shell
+  - angular
+  - postgresql
+  - jdbc
+  - hive
+  - hbase
+  - elasticsearch
+
+A prior build of `dylanmei/zeppelin:latest` contained Spark 1.6.0 and **all** of the avaialble interpreters. That image is still available as `dylanmei/zeppelin:0.6.0-stable`.
 
 ## simple usage
 
-To run Zeppelin in Spark local mode, pull the `latest` image and run the container:
+To start Zeppelin pull the `latest` image and run the container:
 
 ```
 docker pull dylanmei/zeppelin
@@ -23,7 +33,6 @@ Zeppelin will be running at `http://${YOUR_DOCKER_HOST}:8080`.
 
 You can use [docker-compose](http://docs.docker.com/compose) to easily run Zeppelin in more complex configurations. See the `./examples` directory for examples of using Zeppelin:
 
-- with the default tutorial
 - with local data files
 - with ElasticSearch
 
