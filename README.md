@@ -32,10 +32,10 @@ Zeppelin will be running at `http://${YOUR_DOCKER_HOST}:8080`.
 
 ## complex usage
 
-You can use [docker-compose](http://docs.docker.com/compose) to easily run Zeppelin in more complex configurations. See this project's `./examples` directory for examples of using Zeppelin with `docker-compose`:
+You can use [docker-compose](http://docs.docker.com/compose) to easily run Zeppelin in more complex configurations. See this project's `./examples` directory for examples of using Zeppelin with `docker-compose` to :
 
-- to read and write from local data files
-- to read and write documents in ElasticSearch
+- read and write from local data files
+- read and write documents in ElasticSearch
 
 ## onbuild
 
