@@ -5,7 +5,7 @@ A `debian:jessie` based Spark [Zeppelin](http://zeppelin.incubator.apache.org) D
 This image is large and opinionated. It contains
 
 - [Spark 1.6.1](http://spark.apache.org/docs/1.6.1) and [Hadoop 2.6.3](http://hadoop.apache.org/docs/r2.6.3)
-- [PySpark](http://spark.apache.org/docs/1.6.1/api/python) support with Python3, [NumPy](http://www.numpy.org), and [SciPy](https://www.scipy.org/scipylib/index.html), but no matplotlib.
+- [PySpark](http://spark.apache.org/docs/1.6.1/api/python) support with [Python 3.4](https://docs.python.org/3.4), [NumPy](http://www.numpy.org), and [SciPy](https://www.scipy.org/scipylib/index.html), but no matplotlib.
 - A partial list of interpreters out-of-the-box. If your favorite interpreter isn't included, consider [adding it with the api](http://zeppelin.incubator.apache.org/docs/0.6.0-incubating-SNAPSHOT/manual/dynamicinterpreterload.html).
   - spark
   - shell
@@ -16,7 +16,7 @@ This image is large and opinionated. It contains
   - hbase
   - elasticsearch
 
-A prior build of `dylanmei/zeppelin:latest` contained Spark 1.6.0 and **all** of the avaialble interpreters. That image is still available as `dylanmei/zeppelin:0.6.0-stable`.
+A prior build of `dylanmei/zeppelin:latest` contained Spark 1.6.0 and **all** of the stock interpreters. That image is still available as `dylanmei/zeppelin:0.6.0-stable`.
 
 ## simple usage
 
