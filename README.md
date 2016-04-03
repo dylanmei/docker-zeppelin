@@ -1,6 +1,6 @@
 # zeppelin
 
-A `debian:jessie` based Spark [Zeppelin](http://zeppelin.incubator.apache.org) Docker container.
+A `debian:jessie` based Spark and [Zeppelin](http://zeppelin.incubator.apache.org) Docker container.
 
 This image is large and opinionated. It contains:
 
@@ -10,6 +10,7 @@ This image is large and opinionated. It contains:
   - spark
   - shell
   - angular
+  - markdown
   - postgresql
   - jdbc
   - hive
