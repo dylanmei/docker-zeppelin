@@ -11,7 +11,7 @@ RUN set -ex \
  && apt-get update && apt-get install -y --no-install-recommends \
     $buildDeps \
     ca-certificates \
-    wget \ 
+    wget \
     liblapack-dev \
     libopenblas-dev \
  && packages=' \
@@ -28,7 +28,7 @@ ENV ZEPPELIN_PORT 8080
 ENV ZEPPELIN_HOME /usr/zeppelin
 ENV ZEPPELIN_CONF_DIR $ZEPPELIN_HOME/conf
 ENV ZEPPELIN_NOTEBOOK_DIR $ZEPPELIN_HOME/notebook
-ENV ZEPPELIN_COMMIT aff2755
+ENV ZEPPELIN_COMMIT 19e8ed98984c2d2dc91532636ecbfa3115db2796
 RUN set -ex \
  && buildDeps=' \
     git \
@@ -38,12 +38,12 @@ RUN set -ex \
  && curl -sL http://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz \
    | gunzip \
    | tar x -C /tmp/ \
- && git clone https://github.com/apache/incubator-zeppelin.git /usr/src/zeppelin \
+ && git clone https://github.com/apache/zeppelin.git /usr/src/zeppelin \
  && cd /usr/src/zeppelin \
  && git checkout -q $ZEPPELIN_COMMIT \
  && sed -i 's/--no-color/buildSkipTests --no-color/' zeppelin-web/pom.xml \
  && MAVEN_OPTS="-Xms512m -Xmx1024m" /tmp/apache-maven-3.3.9/bin/mvn --batch-mode package -DskipTests -Pbuild-distr \
-  -pl 'zeppelin-interpreter,zeppelin-zengine,zeppelin-display,spark-dependencies,spark,markdown,angular,shell,hive,hbase,postgresql,jdbc,elasticsearch,zeppelin-web,zeppelin-server,zeppelin-distribution' \
+  -pl 'zeppelin-interpreter,zeppelin-zengine,zeppelin-display,spark-dependencies,spark,markdown,angular,shell,hbase,postgresql,jdbc,elasticsearch,zeppelin-web,zeppelin-server,zeppelin-distribution' \
  && tar xvf /usr/src/zeppelin/zeppelin-distribution/target/zeppelin*.tar.gz -C /usr/ \
  && mv /usr/zeppelin* $ZEPPELIN_HOME \
  && mkdir -p $ZEPPELIN_HOME/logs \
