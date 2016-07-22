@@ -1,4 +1,4 @@
-FROM gettyimages/spark:1.6.1-hadoop-2.6
+FROM gettyimages/spark:1.6.2-hadoop-2.6
 
 # SciPy
 RUN set -ex \
@@ -16,6 +16,7 @@ RUN set -ex \
     libopenblas-dev \
  && packages=' \
     numpy \
+    pandasql \
     scipy \
  ' \
  && pip3 install $packages \
@@ -43,7 +44,7 @@ RUN set -ex \
  && git checkout -q $ZEPPELIN_COMMIT \
  && sed -i 's/--no-color/buildSkipTests --no-color/' zeppelin-web/pom.xml \
  && MAVEN_OPTS="-Xms512m -Xmx1024m" /tmp/apache-maven-3.3.9/bin/mvn --batch-mode package -DskipTests -Pbuild-distr \
-  -pl 'zeppelin-interpreter,zeppelin-zengine,zeppelin-display,spark-dependencies,spark,markdown,angular,shell,hbase,postgresql,jdbc,elasticsearch,zeppelin-web,zeppelin-server,zeppelin-distribution' \
+  -pl 'zeppelin-interpreter,zeppelin-zengine,zeppelin-display,spark-dependencies,spark,markdown,angular,shell,hbase,postgresql,jdbc,python,elasticsearch,zeppelin-web,zeppelin-server,zeppelin-distribution' \
  && tar xvf /usr/src/zeppelin/zeppelin-distribution/target/zeppelin*.tar.gz -C /usr/ \
  && mv /usr/zeppelin* $ZEPPELIN_HOME \
  && mkdir -p $ZEPPELIN_HOME/logs \
@@ -56,6 +57,6 @@ RUN set -ex \
  && rm -rf /root/.npm \
  && rm -rf /tmp/*
 
-ADD about.json $ZEPPELIN_NOTEBOOK_DIR/2BH1SW5AH/note.json
+ADD about.json $ZEPPELIN_NOTEBOOK_DIR/2BTRWA9EV/note.json
 WORKDIR $ZEPPELIN_HOME
 CMD ["bin/zeppelin.sh"]

@@ -2,43 +2,7 @@
   "paragraphs": [
     {
       "text": "%sh\nenv | sort | grep HADOOP\nenv | sort | grep SPARK\nenv | sort | grep ZEPPELIN",
-      "authenticationInfo": {},
-      "dateUpdated": "Apr 3, 2016 12:50:03 AM",
-      "config": {
-        "colWidth": 12.0,
-        "graph": {
-          "mode": "table",
-          "height": 300.0,
-          "optionOpen": false,
-          "keys": [],
-          "values": [],
-          "groups": [],
-          "scatter": {}
-        },
-        "enabled": true,
-        "editorMode": "ace/mode/sh"
-      },
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "jobName": "paragraph_1459644525517_-1145369310",
-      "id": "20160403-004845_73513305",
-      "result": {
-        "code": "SUCCESS",
-        "type": "TEXT",
-        "msg": "HADOOP_CONF_DIR\u003d/usr/hadoop-2.6.3/etc/hadoop\nHADOOP_HOME\u003d/usr/hadoop-2.6.3\nHADOOP_VERSION\u003d2.6.3\nPYSPARK_PYTHON\u003dpython3\nSPARK_DIST_CLASSPATH\u003d/usr/hadoop-2.6.3/etc/hadoop/*:/usr/hadoop-2.6.3/share/hadoop/common/lib/*:/usr/hadoop-2.6.3/share/hadoop/common/*:/usr/hadoop-2.6.3/share/hadoop/hdfs/*:/usr/hadoop-2.6.3/share/hadoop/hdfs/lib/*:/usr/hadoop-2.6.3/share/hadoop/hdfs/*:/usr/hadoop-2.6.3/share/hadoop/yarn/lib/*:/usr/hadoop-2.6.3/share/hadoop/yarn/*:/usr/hadoop-2.6.3/share/hadoop/mapreduce/lib/*:/usr/hadoop-2.6.3/share/hadoop/mapreduce/*:/usr/hadoop-2.6.3/share/hadoop/tools/lib/*\nSPARK_HOME\u003d/usr/spark-1.6.1\nSPARK_PACKAGE\u003dspark-1.6.1-bin-without-hadoop\nSPARK_VERSION\u003d1.6.1\nZEPPELIN_COMMIT\u003d67e0fd5\nZEPPELIN_CONF_DIR\u003d/usr/zeppelin/conf\nZEPPELIN_ENCODING\u003dUTF-8\nZEPPELIN_HOME\u003d/usr/zeppelin\nZEPPELIN_IDENT_STRING\u003d\nZEPPELIN_INTERPRETER_DIR\u003d/usr/zeppelin/interpreter\nZEPPELIN_INTP_JAVA_OPTS\u003d\nZEPPELIN_INTP_MEM\u003d-Xms1024m -Xmx1024m -XX:MaxPermSize\u003d512m\nZEPPELIN_LOG_DIR\u003d/usr/zeppelin/logs\nZEPPELIN_MEM\u003d-Xms1024m -Xmx1024m -XX:MaxPermSize\u003d512m\nZEPPELIN_NOTEBOOK_DIR\u003d/usr/zeppelin/notebook\nZEPPELIN_PID_DIR\u003d/usr/zeppelin/run\nZEPPELIN_PORT\u003d8080\nZEPPELIN_RUNNER\u003d/usr/jdk1.8.0_31/bin/java\nZEPPELIN_WAR\u003d/usr/zeppelin/zeppelin-web-0.6.0-incubating-SNAPSHOT.war\n"
-      },
-      "dateCreated": "Apr 3, 2016 12:48:45 AM",
-      "dateStarted": "Apr 3, 2016 12:50:03 AM",
-      "dateFinished": "Apr 3, 2016 12:50:03 AM",
-      "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "text": "%spark\n\nsc.version\nsc.master\nsc.appName\nsc.applicationId\nsc.jars\nsc.getConf.toDebugString\nsc.hadoopConfiguration\n",
-      "authenticationInfo": {},
-      "dateUpdated": "Apr 3, 2016 12:50:24 AM",
+      "dateUpdated": "Jul 22, 2016 6:45:53 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -57,23 +21,23 @@
         "params": {},
         "forms": {}
       },
-      "jobName": "paragraph_1459644575549_27958305",
-      "id": "20160403-004935_1456251824",
+      "apps": [],
+      "jobName": "paragraph_1469169923986_-1211181225",
+      "id": "20160722-064523_924527479",
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "res0: String \u003d 1.6.1\nres1: String \u003d local[*]\nres2: String \u003d Zeppelin\nres3: String \u003d local-1459644663380\nres4: Seq[String] \u003d List(file:/usr/zeppelin/interpreter/spark/zeppelin-spark-0.6.0-incubating-SNAPSHOT.jar)\nres5: String \u003d \nargs\u003d\nmaster\u003dlocal[*]\nspark.app.id\u003dlocal-1459644663380\nspark.app.name\u003dZeppelin\nspark.driver.extraClassPath\u003d::/usr/zeppelin/interpreter/spark/*::/usr/zeppelin/conf:/usr/zeppelin/conf:/usr/zeppelin/lib/zeppelin-interpreter-0.6.0-incubating-SNAPSHOT.jar/usr/zeppelin/interpreter/spark/zeppelin-spark-0.6.0-incubating-SNAPSHOT.jar\nspark.driver.extraJavaOptions\u003d -Dfile.encoding\u003dUTF-8 -Dzeppelin.log.file\u003d/usr/zeppelin/logs/zeppelin-interpreter-spark--935efb571eaf.log\nspark.driver.host\u003d172.17.0.2\nspark.driver.port\u003d41532\nspark.executor.id\u003ddriver\nspark.externalBlockStore.folderName\u003dspark-0b316f76-e75b-44f1-8bb9-d43d7fa16033\nspark.home\u003d/usr/spark-1.6.1\nspark.jars\u003dfile:/usr/zeppelin/interpreter/spark/zeppelin-spark-0.6.0-incubating-SNAPSHOT.jar\nspark.master\u003dlocal[*]\nspark.repl.class....res6: org.apache.hadoop.conf.Configuration \u003d Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.xml, yarn-default.xml, yarn-site.xml\n"
+        "msg": "HADOOP_CONF_DIR\u003d/usr/hadoop-2.6.3/etc/hadoop\nHADOOP_HOME\u003d/usr/hadoop-2.6.3\nHADOOP_VERSION\u003d2.6.3\nSPARK_DIST_CLASSPATH\u003d/usr/hadoop-2.6.3/etc/hadoop/*:/usr/hadoop-2.6.3/share/hadoop/common/lib/*:/usr/hadoop-2.6.3/share/hadoop/common/*:/usr/hadoop-2.6.3/share/hadoop/hdfs/*:/usr/hadoop-2.6.3/share/hadoop/hdfs/lib/*:/usr/hadoop-2.6.3/share/hadoop/hdfs/*:/usr/hadoop-2.6.3/share/hadoop/yarn/lib/*:/usr/hadoop-2.6.3/share/hadoop/yarn/*:/usr/hadoop-2.6.3/share/hadoop/mapreduce/lib/*:/usr/hadoop-2.6.3/share/hadoop/mapreduce/*:/usr/hadoop-2.6.3/share/hadoop/tools/lib/*\nSPARK_HOME\u003d/usr/spark-1.6.2\nSPARK_PACKAGE\u003dspark-1.6.2-bin-without-hadoop\nSPARK_VERSION\u003d1.6.2\nZEPPELIN_COMMIT\u003ddaceee568874a1c98c54ae487700858d2300854b\nZEPPELIN_CONF_DIR\u003d/usr/zeppelin/conf\nZEPPELIN_ENCODING\u003dUTF-8\nZEPPELIN_HOME\u003d/usr/zeppelin\nZEPPELIN_IDENT_STRING\u003d\nZEPPELIN_INTERPRETER_DIR\u003d/usr/zeppelin/interpreter\nZEPPELIN_INTP_JAVA_OPTS\u003d\nZEPPELIN_INTP_MEM\u003d-Xms1024m -Xmx1024m -XX:MaxPermSize\u003d512m\nZEPPELIN_LOG_DIR\u003d/usr/zeppelin/logs\nZEPPELIN_MEM\u003d-Xms1024m -Xmx1024m -XX:MaxPermSize\u003d512m\nZEPPELIN_NOTEBOOK_DIR\u003d/usr/zeppelin/notebook\nZEPPELIN_PID_DIR\u003d/usr/zeppelin/run\nZEPPELIN_PORT\u003d8080\nZEPPELIN_RUNNER\u003d/usr/jdk1.8.0_92/bin/java\nZEPPELIN_WAR\u003d/usr/zeppelin/zeppelin-web-0.7.0-SNAPSHOT.war\n"
       },
-      "dateCreated": "Apr 3, 2016 12:49:35 AM",
-      "dateStarted": "Apr 3, 2016 12:50:24 AM",
-      "dateFinished": "Apr 3, 2016 12:51:16 AM",
+      "dateCreated": "Jul 22, 2016 6:45:23 AM",
+      "dateStarted": "Jul 22, 2016 6:45:53 AM",
+      "dateFinished": "Jul 22, 2016 6:45:54 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%pyspark\n\nimport sys\nprint(sys.version)",
-      "authenticationInfo": {},
-      "dateUpdated": "Apr 3, 2016 12:51:22 AM",
+      "text": "%spark\nsc.version\nsc.master\nsc.appName\nsc.applicationId\nsc.jars\nsc.getConf.toDebugString\nsc.hadoopConfiguration",
+      "dateUpdated": "Jul 22, 2016 6:46:04 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -85,29 +49,65 @@
           "groups": [],
           "scatter": {}
         },
-        "enabled": true
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
       },
       "settings": {
         "params": {},
         "forms": {}
       },
-      "jobName": "paragraph_1459644624590_1415255569",
-      "id": "20160403-005024_2108233036",
+      "apps": [],
+      "jobName": "paragraph_1469169953418_1749723717",
+      "id": "20160722-064553_1487295533",
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "3.4.2 (default, Oct  8 2014, 10:45:20) \n[GCC 4.9.1]\n"
+        "msg": "res0: String \u003d 1.6.2\nres1: String \u003d local[*]\nres2: String \u003d Zeppelin\nres3: String \u003d local-1469169971631\nres4: Seq[String] \u003d List(file:/usr/zeppelin/interpreter/spark/zeppelin-spark-0.7.0-SNAPSHOT.jar)\nres5: String \u003d \nargs\u003d\nmaster\u003dlocal[*]\nspark.app.id\u003dlocal-1469169971631\nspark.app.name\u003dZeppelin\nspark.driver.extraClassPath\u003d::/usr/zeppelin/interpreter/spark/*::/usr/zeppelin/conf:/usr/zeppelin/conf:/usr/zeppelin/lib/zeppelin-interpreter-0.7.0-SNAPSHOT.jar/usr/zeppelin/interpreter/spark/zeppelin-spark-0.7.0-SNAPSHOT.jar\nspark.driver.extraJavaOptions\u003d -Dfile.encoding\u003dUTF-8 -Dlog4j.configuration\u003dfile:///usr/zeppelin/conf/log4j.properties -Dzeppelin.log.file\u003d/usr/zeppelin/logs/zeppelin-interpreter-spark--1a889aeefc1e.log\nspark.driver.host\u003d172.17.0.2\nspark.driver.port\u003d34683\nspark.executor.id\u003ddriver\nspark.externalBlockStore.folderName\u003dspark-ec9f6f29-a559-4d57-9fe5-495ae530f9ac\nspark.home\u003d/usr/spark-1.6.2\nspark.jars\u003dfile:/usr/zeppelin/interpreter/spark/zeppelin-spark-0.7.0-SNAPSHOT.jar\nspark.m...res6: org.apache.hadoop.conf.Configuration \u003d Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.xml, yarn-default.xml, yarn-site.xml\n"
       },
-      "dateCreated": "Apr 3, 2016 12:50:24 AM",
-      "dateStarted": "Apr 3, 2016 12:51:22 AM",
-      "dateFinished": "Apr 3, 2016 12:51:23 AM",
+      "dateCreated": "Jul 22, 2016 6:45:53 AM",
+      "dateStarted": "Jul 22, 2016 6:46:04 AM",
+      "dateFinished": "Jul 22, 2016 6:46:18 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%sh pip3 list",
-      "authenticationInfo": {},
-      "dateUpdated": "Apr 3, 2016 12:51:32 AM",
+      "text": "%python print(sys.version)",
+      "dateUpdated": "Jul 22, 2016 6:46:28 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1469169964908_-998152927",
+      "id": "20160722-064604_1357965809",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "3.4.2 (default, Oct  8 2014, 10:45:20) \n\r[GCC 4.9.1]"
+      },
+      "dateCreated": "Jul 22, 2016 6:46:04 AM",
+      "dateStarted": "Jul 22, 2016 6:46:28 AM",
+      "dateFinished": "Jul 22, 2016 6:46:28 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh pip list ",
+      "dateUpdated": "Jul 22, 2016 6:46:36 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -126,53 +126,36 @@
         "params": {},
         "forms": {}
       },
-      "jobName": "paragraph_1459644646527_-97161709",
-      "id": "20160403-005046_668095157",
+      "apps": [],
+      "jobName": "paragraph_1469169982498_-2090439731",
+      "id": "20160722-064622_1971147917",
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "numpy (1.11.0)\npip (8.1.0)\npy4j (0.9.2)\nscipy (0.17.0)\nsetuptools (5.5.1)\n"
+        "msg": "numpy (1.11.1)\npandas (0.18.1)\npandasql (0.7.3)\npip (8.1.2)\npy4j (0.10.2.1)\npython-dateutil (2.5.3)\npytz (2016.6.1)\nscipy (0.17.1)\nsetuptools (5.5.1)\nsix (1.10.0)\nSQLAlchemy (1.0.14)\n"
       },
-      "dateCreated": "Apr 3, 2016 12:50:46 AM",
-      "dateStarted": "Apr 3, 2016 12:51:32 AM",
-      "dateFinished": "Apr 3, 2016 12:51:33 AM",
+      "dateCreated": "Jul 22, 2016 6:46:22 AM",
+      "dateStarted": "Jul 22, 2016 6:46:36 AM",
+      "dateFinished": "Jul 22, 2016 6:46:36 AM",
       "status": "FINISHED",
-      "progressUpdateIntervalMs": 500
-    },
-    {
-      "config": {},
-      "settings": {
-        "params": {},
-        "forms": {}
-      },
-      "jobName": "paragraph_1459644715880_1214355347",
-      "id": "20160403-005155_964585708",
-      "dateCreated": "Apr 3, 2016 12:51:55 AM",
-      "status": "READY",
       "progressUpdateIntervalMs": 500
     }
   ],
   "name": "About this Build",
-  "id": "2BH1SW5AH",
+  "id": "2BTRWA9EV",
+  "lastReplName": {
+    "value": "sh"
+  },
   "angularObjects": {
-    "2BHN9V8D2": [],
-    "2BFNVAPVY": [],
-    "2BF4PQ184": [],
-    "2BGTK1HYP": [],
-    "2BHNWRKEH": [],
-    "2BG8293FX": [],
-    "2BFPQ6MDR": [],
-    "2BG19358E": [],
-    "2BJ93B15J": [],
-    "2BGACZM4A": [],
-    "2BGQWBN7A": [],
-    "2BF5WDZEF": [],
-    "2BHM1J2KW": [],
-    "2BFJMMJ5P": [],
-    "2BHMWUA6B": [],
-    "2BHFFE5MJ": [],
-    "2BEQA3Y5M": [],
-    "2BFN2QC1E": []
+    "2BTVRS1FS:shared_process": [],
+    "2BSM3P4SJ:shared_process": [],
+    "2BQG69NV6:shared_process": [],
+    "2BU4MWBWQ:shared_process": [],
+    "2BS3JH852:shared_process": [],
+    "2BTMF1E3B:shared_process": [],
+    "2BSEN5CNX:shared_process": [],
+    "2BRNY397S:shared_process": [],
+    "2BR44UY8K:shared_process": []
   },
   "config": {},
   "info": {}
