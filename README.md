@@ -25,7 +25,7 @@ To start Zeppelin pull the `latest` image and run the container:
 
 ```
 docker pull dylanmei/zeppelin
-docker run --rm -p 8080:8080 -v $PWD/about.json:/usr/zeppelin/notebook/about.json dylanmei/zeppelin
+docker run --rm -p 8080:8080 dylanmei/zeppelin
 ```
 
 Zeppelin will be running at `http://${YOUR_DOCKER_HOST}:8080`.
