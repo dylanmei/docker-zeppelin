@@ -1,4 +1,4 @@
-FROM gettyimages/spark:1.6.2-hadoop-2.6
+FROM gettyimages/spark:2.0.0-hadoop-2.7
 
 # SciPy
 RUN set -ex \
@@ -29,7 +29,7 @@ ENV ZEPPELIN_PORT 8080
 ENV ZEPPELIN_HOME /usr/zeppelin
 ENV ZEPPELIN_CONF_DIR $ZEPPELIN_HOME/conf
 ENV ZEPPELIN_NOTEBOOK_DIR $ZEPPELIN_HOME/notebook
-ENV ZEPPELIN_COMMIT daceee568874a1c98c54ae487700858d2300854b
+ENV ZEPPELIN_COMMIT 04da56403b543e661dca4485f3c5a33ac53d0ede
 RUN set -ex \
  && buildDeps=' \
     git \
