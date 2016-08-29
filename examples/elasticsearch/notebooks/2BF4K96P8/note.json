@@ -2,8 +2,7 @@
   "paragraphs": [
     {
       "text": "%md Zeppelin can interact with [ElasticSearch](http://elastic.co) via an [ElasticSearch interpreter](http://zeppelin.incubator.apache.org/docs/0.6.0-incubating-SNAPSHOT/interpreter/elasticsearch.html), and also via Spark. This notebook uses the ElasticSearch Interpreter\n\nFirst, let\u0027s use the shell interpreter to be sure that [Docker Compose](https://www.docker.com/products/docker-compose) has linked our ElasticSearch container and that we can reach it...",
-      "authenticationInfo": {},
-      "dateUpdated": "Apr 2, 2016 2:30:43 PM",
+      "dateUpdated": "Apr 2, 2016 2:30:43 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -23,6 +22,7 @@
         "params": {},
         "forms": {}
       },
+      "apps": [],
       "jobName": "paragraph_1459607004775_1958851938",
       "id": "20160402-142324_318135174",
       "result": {
@@ -30,15 +30,15 @@
         "type": "HTML",
         "msg": "\u003cp\u003eZeppelin can interact with \u003ca href\u003d\"http://elastic.co\"\u003eElasticSearch\u003c/a\u003e via an \u003ca href\u003d\"http://zeppelin.incubator.apache.org/docs/0.6.0-incubating-SNAPSHOT/interpreter/elasticsearch.html\"\u003eElasticSearch interpreter\u003c/a\u003e, and also via Spark. This notebook uses the ElasticSearch Interpreter\u003c/p\u003e\n\u003cp\u003eFirst, let\u0027s use the shell interpreter to be sure that \u003ca href\u003d\"https://www.docker.com/products/docker-compose\"\u003eDocker Compose\u003c/a\u003e has linked our ElasticSearch container and that we can reach it\u0026hellip;\u003c/p\u003e\n"
       },
-      "dateCreated": "Apr 2, 2016 2:23:24 PM",
-      "dateStarted": "Apr 2, 2016 2:30:41 PM",
-      "dateFinished": "Apr 2, 2016 2:30:41 PM",
+      "dateCreated": "Apr 2, 2016 2:23:24 AM",
+      "dateStarted": "Apr 2, 2016 2:30:41 AM",
+      "dateFinished": "Apr 2, 2016 2:30:41 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%sh curl http://elasticsearch:9200/",
-      "dateUpdated": "Apr 2, 2016 2:26:33 PM",
+      "text": "%sh curl -is http://elasticsearch:9200/",
+      "dateUpdated": "Aug 29, 2016 2:34:26 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -50,22 +50,26 @@
           "groups": [],
           "scatter": {}
         },
-        "enabled": true
+        "enabled": true,
+        "editorMode": "ace/mode/sh"
       },
       "settings": {
         "params": {},
         "forms": {}
       },
+      "apps": [],
       "jobName": "paragraph_1459607106706_-602147299",
       "id": "20160402-142506_1963327239",
-      "dateCreated": "Apr 2, 2016 2:25:06 PM",
-      "status": "READY",
+      "dateCreated": "Apr 2, 2016 2:25:06 AM",
+      "dateStarted": "Aug 29, 2016 2:34:26 AM",
+      "dateFinished": "Aug 29, 2016 2:34:27 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
-      "text": "%md Next, we must manually configure the ElasticSearch interpreter in the Interpreter settings. Change the *elasticsearch.host* property value from `localhost` to `elasticsearch`.\n\nThe complete list of settings should read:\n\n- elasticsearch.port `9300`\n- elasticsearch.result.size `10`\n- elasticsearch.cluster.name `elasticsearch`\n- elasticsearch.host `elasticsearch`\n\nBe sure to restart the interpreter if prompted. Once complete, insert some data...",
-      "authenticationInfo": {},
-      "dateUpdated": "Apr 2, 2016 8:39:06 PM",
+      "text": "%md Next, let\u0027s ensure the correct configuration for the ElasticSearch interpreter in Zeppelin\u0027s Interpreter settings.\n\nAll settings can be found [on the elasticsearch guide](https://www.elastic.co/guide/en/elasticsearch/hadoop/current/spark.html). Our list of settings should include:\n\n- elasticsearch.cluster.name `elasticsearch`\n- elasticsearch.host `elasticsearch`\n- elasticsearch.port `9300`\n\n \n\nIf we change these values, be sure to restart the interpreter when prompted. Once complete, insert some data...",
+      "dateUpdated": "Aug 14, 2016 12:42:20 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -85,23 +89,23 @@
         "params": {},
         "forms": {}
       },
+      "apps": [],
       "jobName": "paragraph_1459607135731_1345713788",
       "id": "20160402-142535_382223669",
       "result": {
         "code": "SUCCESS",
         "type": "HTML",
-        "msg": "\u003cp\u003eNext, we must manually configure the ElasticSearch interpreter in the Interpreter settings. Change the \u003cem\u003eelasticsearch.host\u003c/em\u003e property value from \u003ccode\u003elocalhost\u003c/code\u003e to \u003ccode\u003eelasticsearch\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eThe complete list of settings should read:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eelasticsearch.port \u003ccode\u003e9300\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eelasticsearch.result.size \u003ccode\u003e10\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eelasticsearch.cluster.name \u003ccode\u003eelasticsearch\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eelasticsearch.host \u003ccode\u003eelasticsearch\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eBe sure to restart the interpreter if prompted. Once complete, let\u0027s create some data\u0026hellip;\u003c/p\u003e\n"
+        "msg": "\u003cp\u003eNext, let\u0027s ensure the correct configuration for the ElasticSearch interpreter in Zeppelin\u0027s Interpreter settings.\u003c/p\u003e\n\u003cp\u003eAll settings can be found \u003ca href\u003d\"https://www.elastic.co/guide/en/elasticsearch/hadoop/current/spark.html\"\u003eon the elasticsearch guide\u003c/a\u003e. Our list of settings should include:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eelasticsearch.cluster.name \u003ccode\u003eelasticsearch\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eelasticsearch.host \u003ccode\u003eelasticsearch\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eelasticsearch.port \u003ccode\u003e9300\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eIf we change these values, be sure to restart the interpreter when prompted. Once complete, insert some data\u0026hellip;\u003c/p\u003e\n"
       },
-      "dateCreated": "Apr 2, 2016 2:25:35 PM",
-      "dateStarted": "Apr 2, 2016 2:30:33 PM",
-      "dateFinished": "Apr 2, 2016 2:30:33 PM",
+      "dateCreated": "Apr 2, 2016 2:25:35 AM",
+      "dateStarted": "Aug 14, 2016 12:42:07 PM",
+      "dateFinished": "Aug 14, 2016 12:42:07 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%elasticsearch\n\nindex /logs/http {\n  \"date\": \"2015-12-08T21:03:13.588Z\",\n  \"request\": {\n    \"method\": \"GET\",\n    \"url\": \"/zeppelin/4cd001cd-c517-4fa9-b8e5-a06b8f4056c4\",\n    \"headers\": [ \"Accept: *.*\", \"Host: apache.org\"]\n  },\n  \"status\": \"403\",\n  \"content_length\": 1234\n}",
-      "authenticationInfo": {},
-      "dateUpdated": "Apr 2, 2016 8:36:49 PM",
+      "dateUpdated": "Aug 29, 2016 2:34:33 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -120,23 +124,19 @@
         "params": {},
         "forms": {}
       },
+      "apps": [],
       "jobName": "paragraph_1459607369643_2073952035",
       "id": "20160402-142929_128771809",
-      "result": {
-        "code": "SUCCESS",
-        "type": "TEXT",
-        "msg": "AVPYsUPwhYrl1lbnE3S1"
-      },
-      "dateCreated": "Apr 2, 2016 2:29:29 PM",
-      "dateStarted": "Apr 2, 2016 8:36:49 PM",
-      "dateFinished": "Apr 2, 2016 8:36:49 PM",
+      "dateCreated": "Apr 2, 2016 2:29:29 AM",
+      "dateStarted": "Aug 29, 2016 2:34:34 AM",
+      "dateFinished": "Aug 29, 2016 2:34:36 AM",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md and then query the data...",
-      "authenticationInfo": {},
-      "dateUpdated": "Apr 2, 2016 8:39:01 PM",
+      "dateUpdated": "Aug 13, 2016 6:29:18 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -156,6 +156,7 @@
         "params": {},
         "forms": {}
       },
+      "apps": [],
       "jobName": "paragraph_1459629463224_-1008616153",
       "id": "20160402-203743_217235946",
       "result": {
@@ -163,16 +164,15 @@
         "type": "HTML",
         "msg": "\u003cp\u003eand then query the data\u0026hellip;\u003c/p\u003e\n"
       },
-      "dateCreated": "Apr 2, 2016 8:37:43 PM",
-      "dateStarted": "Apr 2, 2016 8:39:00 PM",
-      "dateFinished": "Apr 2, 2016 8:39:00 PM",
+      "dateCreated": "Apr 2, 2016 8:37:43 AM",
+      "dateStarted": "Aug 13, 2016 6:29:18 AM",
+      "dateFinished": "Aug 13, 2016 6:29:18 AM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%elasticsearch search logs/http",
-      "authenticationInfo": {},
-      "dateUpdated": "Apr 2, 2016 8:39:13 PM",
+      "dateUpdated": "Aug 29, 2016 2:34:44 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -191,34 +191,64 @@
         "params": {},
         "forms": {}
       },
+      "apps": [],
       "jobName": "paragraph_1459607697266_-620568750",
       "id": "20160402-143457_2047955666",
-      "dateCreated": "Apr 2, 2016 2:34:57 PM",
-      "dateStarted": "Apr 2, 2016 8:39:13 PM",
-      "dateFinished": "Apr 2, 2016 8:39:13 PM",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "content_length\tdate\trequest.headers[0]\trequest.headers[1]\trequest.method\trequest.url\tstatus\n1234\t2015-12-08T21:03:13.588Z\tAccept: *.*\tHost: apache.org\tGET\t/zeppelin/4cd001cd-c517-4fa9-b8e5-a06b8f4056c4\t403\n"
+      },
+      "dateCreated": "Apr 2, 2016 2:34:57 AM",
+      "dateStarted": "Aug 29, 2016 2:34:44 AM",
+      "dateFinished": "Aug 29, 2016 2:34:44 AM",
       "status": "FINISHED",
-      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
-      "config": {},
+      "text": "",
+      "dateUpdated": "Aug 14, 2016 12:38:33 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
       "settings": {
         "params": {},
         "forms": {}
       },
+      "apps": [],
       "jobName": "paragraph_1459629642511_1037706716",
       "id": "20160402-204042_810555519",
-      "dateCreated": "Apr 2, 2016 8:40:42 PM",
+      "dateCreated": "Apr 2, 2016 8:40:42 AM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
   ],
   "name": "ElasticSearch Interpreter",
   "id": "2BF4K96P8",
+  "lastReplName": {
+    "value": "elasticsearch"
+  },
   "angularObjects": {
-    "2BHETK4VE": [],
-    "2BF6XBDQX": [],
-    "2BEXNGM85": []
+    "2BVDFYZJT:shared_process": [],
+    "2BVFVGE5D:shared_process": [],
+    "2BTHU3Q1B:shared_process": [],
+    "2BW2HQXMW:shared_process": [],
+    "2BW48CCD8:shared_process": [],
+    "2BVNVXSVB:shared_process": [],
+    "2BUYGGV64:shared_process": [],
+    "2BUSSNFS8:shared_process": [],
+    "2BVR113T9:shared_process": []
   },
   "config": {},
   "info": {}
