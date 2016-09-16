@@ -29,7 +29,7 @@ ENV ZEPPELIN_PORT 8080
 ENV ZEPPELIN_HOME /usr/zeppelin
 ENV ZEPPELIN_CONF_DIR $ZEPPELIN_HOME/conf
 ENV ZEPPELIN_NOTEBOOK_DIR $ZEPPELIN_HOME/notebook
-ENV ZEPPELIN_COMMIT 5f1208bdbace9a56ae2744193880a2be9ce118df
+ENV ZEPPELIN_COMMIT 383402dc69a9ecc8a34cd0f9ebaf4732c51d36d7
 RUN set -ex \
  && buildDeps=' \
     git \
@@ -50,7 +50,7 @@ RUN set -ex \
  && mv /usr/zeppelin* $ZEPPELIN_HOME \
  && mkdir -p $ZEPPELIN_HOME/logs \
  && mkdir -p $ZEPPELIN_HOME/run \
- && rm -rf $ZEPPELIN_NOTEBOOK_DIR/r \
+ && rm -rf $ZEPPELIN_NOTEBOOK_DIR/2BWJFTXKJ \
  && apt-get purge -y --auto-remove $buildDeps \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /usr/src/zeppelin \
