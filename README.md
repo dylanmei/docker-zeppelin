@@ -8,6 +8,8 @@ This image is large and opinionated. It contains:
 - [PySpark](http://spark.apache.org/docs/2.0.0/api/python) support with [Python 3.4](https://docs.python.org/3.4), [NumPy](http://www.numpy.org), [PandaSQL](https://github.com/yhat/pandasql), and [SciPy](https://www.scipy.org/scipylib/index.html), but no matplotlib.
 - A partial list of interpreters out-of-the-box. If your favorite interpreter isn't included, consider [adding it with the api](http://zeppelin.apache.org/docs/0.7.0-SNAPSHOT/manual/dynamicinterpreterload.html).
   - spark
+  - sparkR
+  - R
   - shell
   - angular
   - markdown
