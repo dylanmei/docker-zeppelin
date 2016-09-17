@@ -39,6 +39,7 @@ RUN set -ex \
     libxml2-dev \
     libcairo-dev \
     libssh2-1-dev \
+    mesa-common-dev \
  ' \
  && binaries=' \
     r-base \
