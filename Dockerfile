@@ -67,7 +67,6 @@ RUN set -ex \
  && mv /usr/zeppelin* $ZEPPELIN_HOME \
  && mkdir -p $ZEPPELIN_HOME/logs \
  && mkdir -p $ZEPPELIN_HOME/run \
- && rm -rf $ZEPPELIN_NOTEBOOK_DIR/2BWJFTXKJ \
  && apt-get purge -y --auto-remove $buildDeps \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /usr/src/ \
