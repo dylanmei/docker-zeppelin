@@ -1,4 +1,4 @@
-FROM gettyimages/spark:2.0.2-hadoop-2.7
+FROM gettyimages/spark:2.1.0-hadoop-2.7
 
 # SciPy
 RUN set -ex \
@@ -29,11 +29,13 @@ ENV ZEPPELIN_PORT 8080
 ENV ZEPPELIN_HOME /usr/zeppelin
 ENV ZEPPELIN_CONF_DIR $ZEPPELIN_HOME/conf
 ENV ZEPPELIN_NOTEBOOK_DIR $ZEPPELIN_HOME/notebook
-ENV ZEPPELIN_COMMIT 7f6f739ae396e07de573bea4ef16a388c54e77b8
+ENV ZEPPELIN_COMMIT v0.7.0
+RUN echo '{ "allow_root": true }' > /root/.bowerrc
 RUN set -ex \
  && buildDeps=' \
     git \
     bzip2 \
+    npm \
  ' \
  && apt-get update && apt-get install -y --no-install-recommends $buildDeps \
  && curl -sL http://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz \
