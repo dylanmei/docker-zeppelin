@@ -4,9 +4,9 @@ A `debian:jessie` based Spark and [Zeppelin](http://zeppelin.apache.org) Docker 
 
 This image is large and opinionated. It contains:
 
-- [Spark 2.1.0](http://spark.apache.org/docs/2.1.0) and [Hadoop 2.7.3](http://hadoop.apache.org/docs/r2.7.3)
-- [PySpark](http://spark.apache.org/docs/2.0.1/api/python) support with [Python 3.4](https://docs.python.org/3.4), [NumPy](http://www.numpy.org), [PandaSQL](https://github.com/yhat/pandasql), and [SciPy](https://www.scipy.org/scipylib/index.html), but no matplotlib.
-- A partial list of interpreters out-of-the-box. If your favorite interpreter isn't included, consider [adding it with the api](http://zeppelin.apache.org/docs/0.7.1/manual/dynamicinterpreterload.html).
+- [Spark 2.1.1](http://spark.apache.org/docs/2.1.1) and [Hadoop 2.7.3](http://hadoop.apache.org/docs/r2.7.3)
+- [PySpark](http://spark.apache.org/docs/2.1.1/api/python) support with [Python 3.4](https://docs.python.org/3.4), [NumPy](http://www.numpy.org), [PandaSQL](https://github.com/yhat/pandasql), and [SciPy](https://www.scipy.org/scipylib/index.html), but no matplotlib.
+- A partial list of interpreters out-of-the-box. If your favorite interpreter isn't included, consider [adding it with the api](http://zeppelin.apache.org/docs/0.7.2/manual/dynamicinterpreterload.html).
   - spark
   - shell
   - angular
