@@ -1,2 +1,37 @@
-./notebooks/
-./docker-compose.yml
+*~
+\#*
+.DS_Store
+venv
+*.tgz
+/bootstrap/id_rsa.pub
+cluster/test
+
+# Python
+common/bin/*.pyc
+*.pyc
+
+# Intellij
+.idea
+**/.idea
+
+# Log
+npm-debug.log
+output.log
+httpServer.log
+/daemon.log
+common/log/
+/sqoop1-ingestion.log
+
+# Frontend
+frontend/test/unit/coverage
+artifact/
+
+# Git  
+git-repo/
+processes/
+
+# npm
+package-lock.json
+src/package-lock.json
+frontend/package-lock.json
+node_modules
