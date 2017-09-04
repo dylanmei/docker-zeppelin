@@ -66,6 +66,22 @@ INSTALL
 docker build -t my_zeppelin .
 ```
 
+## Modifications by Kay
+### Add sources.list
+This are all from http://mirrors.aliyun.com/help/debian
+```
+deb http://mirrors.aliyun.com/debian/ jessie main non-free contrib
+deb http://mirrors.aliyun.com/debian/ jessie-proposed-updates main non-free contrib
+deb-src http://mirrors.aliyun.com/debian/ jessie main non-free contrib
+deb-src http://mirrors.aliyun.com/debian/ jessie-proposed-updates main non-free contrib
+```
+
+### Add R env
+
+### Add python matplotlib
+
+### Add zeppelin full pack of interpreters
+
 ## license
 
 MIT
