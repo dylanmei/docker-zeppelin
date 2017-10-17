@@ -20,6 +20,7 @@ RUN set -ex \
     scipy \
  ' \
  && pip3 install $packages \
+ && rm -rf /root/.cache/pip \
  && apt-get purge -y --auto-remove $buildDeps \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
@@ -56,6 +57,7 @@ RUN set -ex \
  && rm -rf /usr/src/zeppelin \
  && rm -rf /root/.m2 \
  && rm -rf /root/.npm \
+ && rm -rf /root/.cache/bower \
  && rm -rf /tmp/*
 
 RUN ln -s /usr/bin/pip3 /usr/bin/pip \
