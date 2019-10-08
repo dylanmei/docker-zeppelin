@@ -1,4 +1,4 @@
-**This repo is Deprecated, Please refer to [Apache Zeppelin Official Docker Image](https://hub.docker.com/r/apache/zeppelin/)**
+**This repo is DEPRECATED, Please refer to [Apache Zeppelin Official Docker Image](https://hub.docker.com/r/apache/zeppelin/)**
 
 # zeppelin
 
