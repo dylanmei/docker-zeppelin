@@ -7,7 +7,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 # JAVA
-ENV JAVA_HOME /usr/jdk1.8.0_31
+ENV JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/
 ENV PATH $PATH:$JAVA_HOME/bin
 RUN curl -sL --retry 3 --insecure \
   --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
